@@ -10,7 +10,6 @@ import Tag from '@/components/Tag'
 const MAX_DISPLAY = 3
 
 interface Posts {
-  // title, description, pubDate, link, categories, guid
   title: string
   description: string
   pubDate: string
@@ -32,13 +31,8 @@ export default function Home() {
         },
       })
       setPosts(response.data.items)
-
-      console.log(response.data.items)
-      console.log('===========================')
     } catch (error) {
-      //error handling
-    } finally {
-      // setLoading(false)
+      console.log(error)
     }
   }, [mediumFeedXml])
 
