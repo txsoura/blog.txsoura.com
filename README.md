@@ -1,4 +1,4 @@
-# Tailwind Nextjs Starter Blog
+# Txsoura Blog
 I forked this project from [![Timlrx](https://img.shields.io/github/forks/timlrx/tailwind-nextjs-starter-blog?style=social)](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/network/), so if you want the original project (without my changes), contribute, support or [sponsor](https://github.com/sponsors/timlrx), go to his profile.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/txsoura/blog.txsoura.com)
