@@ -1,5 +1,11 @@
+import { Analytics } from '@vercel/analytics/react'
 import Main from './Main'
 
 export default async function Page() {
-  return <Main />
+  return (
+    <>
+      <Analytics />
+      <Main />
+    </>
+  )
 }
