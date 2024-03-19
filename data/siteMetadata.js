@@ -1,25 +1,28 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
-  language: 'en-us',
+  title: 'Txsoura Blog',
+  author: 'Victor Tesoura Júnior',
+  headerTitle: 'Txsoura Blog',
+  description:
+    'Bem-vindo(a) ao meu blog pessoal. Aqui você encontrará artigos sobre tecnologia, programação, desenvolvimento web, entre outros assuntos.',
+  language: 'pt',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteRepo: 'https://github.com/txsoura/blog.txsoura.com',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
-  locale: 'en-US',
+  mastodon: 'https://mastodon.social/@txsoura',
+  email: 'blog@txsoura.com',
+  github: 'https://github.com/txsoura',
+  twitter: 'https://twitter.com/txsoura',
+  snapchat: 'https://www.snapchat.com/add/txsoura',
+  bluesky: 'https://bsky.app/profile/txsoura.com',
+  bereal: 'https://bereal.com/txsoura',
+  youtube: 'https://youtube.com/c/txsoura',
+  linkedin: 'https://www.linkedin.com/in/txsoura',
+  threads: 'https://www.threads.net/@txsoura',
+  instagram: 'https://www.instagram.com/txsoura',
+  locale: 'pt',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
@@ -41,11 +44,6 @@ const siteMetadata = {
     // googleAnalytics: {
     //   googleAnalyticsId: '', // e.g. G-XXXXXXX
     // },
-  },
-  newsletter: {
-    // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
-    // Please add your .env file and modify it according to your selection
-    provider: 'buttondown',
   },
   comments: {
     // If you want to use an analytics provider you have to add it to the
@@ -76,20 +74,6 @@ const siteMetadata = {
       // This corresponds to the `data-lang="en"` in giscus's configurations
       lang: 'en',
     },
-  },
-  search: {
-    provider: 'kbar', // kbar or algolia
-    kbarConfig: {
-      searchDocumentsPath: 'search.json', // path to load documents to search
-    },
-    // provider: 'algolia',
-    // algoliaConfig: {
-    //   // The application ID provided by Algolia
-    //   appId: 'R2IYF7ETH7',
-    //   // Public API key: it is safe to commit it
-    //   apiKey: '599cec31baffa4868cae4e79f180729b',
-    //   indexName: 'docsearch',
-    // },
   },
 }
 

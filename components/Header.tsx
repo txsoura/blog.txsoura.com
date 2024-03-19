@@ -1,12 +1,12 @@
 import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import SearchButton from './SearchButton'
 
 const Header = () => {
+  const subscribeUrl = process.env.NEXT_PUBLIC_MEDIUM_SUBSCRIBE_URL
+
   return (
     <header className="flex items-center justify-between py-10">
       <div>
@@ -26,18 +26,16 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-        {headerNavLinks
-          .filter((link) => link.href !== '/')
-          .map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-              className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
-            >
-              {link.title}
-            </Link>
-          ))}
-        <SearchButton />
+        {subscribeUrl && (
+          <Link
+            href={subscribeUrl}
+            target="_blank"
+            className="hidden font-medium text-gray-900 dark:text-gray-100 sm:block"
+          >
+            Subscreva-se
+          </Link>
+        )}
+
         <ThemeSwitch />
         <MobileNav />
       </div>

@@ -8,20 +8,19 @@
     "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts"
+    "lint": "next lint --fix --dir app --dir components --dir lib --dir scripts"
   },
   "dependencies": {
     "@next/bundle-analyzer": "14.1.0",
     "@tailwindcss/forms": "^0.5.4",
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
-    "contentlayer": "0.3.4",
+    "axios": "^1.6.8",
     "esbuild": "0.18.11",
     "github-slugger": "^2.0.0",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.0",
     "next": "14.1.0",
-    "next-contentlayer": "0.3.4",
     "next-themes": "^0.2.1",
     "pliny": "0.1.7",
     "postcss": "^8.4.24",
@@ -38,11 +37,11 @@
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
     "tailwindcss": "^3.4.1",
-    "unist-util-visit": "^4.1.0"
+    "unist-util-visit": "^4.1.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
-    "@types/mdx": "^2.0.5",
     "@types/react": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
@@ -70,7 +69,7 @@
     "*.+(js|jsx|ts|tsx)": [
       "eslint --fix"
     ],
-    "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
+    "*.+(js|jsx|ts|tsx|json|css)": [
       "prettier --write"
     ]
   },

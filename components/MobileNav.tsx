@@ -2,10 +2,10 @@
 
 import { useState } from 'react'
 import Link from './Link'
-import headerNavLinks from '@/data/headerNavLinks'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
+  const subscribeUrl = process.env.NEXT_PUBLIC_MEDIUM_SUBSCRIBE_URL
 
   const onToggleNav = () => {
     setNavShow((status) => {
@@ -57,17 +57,16 @@ const MobileNav = () => {
           </button>
         </div>
         <nav className="fixed mt-8 h-full">
-          {headerNavLinks.map((link) => (
-            <div key={link.title} className="px-12 py-4">
-              <Link
-                href={link.href}
-                className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
-                onClick={onToggleNav}
-              >
-                {link.title}
-              </Link>
-            </div>
-          ))}
+          {subscribeUrl && (
+            <Link
+              href={subscribeUrl}
+              target="_blank"
+              className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+              onClick={onToggleNav}
+            >
+              Subscreva-se
+            </Link>
+          )}
         </nav>
       </div>
     </>

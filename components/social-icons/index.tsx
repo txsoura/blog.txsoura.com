@@ -1,7 +1,9 @@
 import {
   Mail,
   Github,
-  Facebook,
+  Snapchat,
+  Bereal,
+  Bluesky,
   Youtube,
   Linkedin,
   Twitter,
@@ -13,13 +15,15 @@ import {
 const components = {
   mail: Mail,
   github: Github,
-  facebook: Facebook,
   youtube: Youtube,
   linkedin: Linkedin,
   twitter: Twitter,
   mastodon: Mastodon,
   threads: Threads,
   instagram: Instagram,
+  snapchat: Snapchat,
+  bereal: Bereal,
+  bluesky: Bluesky,
 }
 
 type SocialIconProps = {
