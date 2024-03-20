@@ -6,6 +6,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import { rss2jsApi } from 'app/services/rss2jsApi'
 import Tag from '@/components/Tag'
+import readingTime from 'reading-time'
 
 const MAX_DISPLAY = 3
 
@@ -36,6 +37,11 @@ export default function Home() {
     }
   }, [mediumFeedXml])
 
+  const readTime = (text: string) => {
+    const time = readingTime(text)
+    return Math.round(time.minutes)
+  }
+
   useEffect(() => {
     getFeedPosts()
   }, [getFeedPosts])
@@ -63,6 +69,9 @@ export default function Home() {
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={pubDate}>{formatDate(pubDate, siteMetadata.locale)}</time>
+                        <span> &middot; </span>
+                        <br className="hidden xl:block" />
+                        <span>{readTime(description)} min leitura</span>
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
