@@ -7,7 +7,7 @@ const siteMetadata = {
     'Bem-vindo(a) ao meu blog pessoal. Aqui você encontrará artigos sobre tecnologia, programação, desenvolvimento web, entre outros assuntos.',
   language: 'pt',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
+  siteUrl: 'https://blog.txsoura.com',
   siteRepo: 'https://github.com/txsoura/blog.txsoura.com',
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
@@ -35,7 +35,7 @@ const siteMetadata = {
       // Remember to add 'us.umami.is' in `next.config.js` as a permitted domain for the CSP
     },
     // plausibleAnalytics: {
-    //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    //   plausibleDataDomain: '', // e.g. blog.txsoura.com
     // },
     // simpleAnalytics: {},
     // posthogAnalytics: {
